@@ -2,7 +2,7 @@
 University’s Final project 
 
 ## Table of contents
-* [General info](#general-info)
+* [General info]
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
