@@ -2,8 +2,7 @@
 University’s Final project 
 
 ## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Features](#features)
 * [Inspiration](#inspiration)
-* [Contact](#contact)
+
+## Inspiration
+As electronic music industry grows, and the warm analog sound returns to the forefront, the Hybrid Musical Monophonic Synthesizer offers a full analog signal path and a digital precise tempo control, periodic sequences generation and MIDI notes conversion.
