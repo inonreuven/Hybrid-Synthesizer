@@ -35,6 +35,6 @@ The rotary Encoders used as BPM selection: one to set the BPM value and one for 
 - [7- segments display](https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html) implementation- 
  each digit is illuminated just 1/3 of the time, but because the eye cannot perceive the darkening of a digit before it is illuminated again, the digit appears continuously illuminated. For each of the three digits to appear bright and continuously illuminated, all three digits should be driven at least once every 9 ms. Thus the entire display would be refreshed once every 9 ms and each digit would be illuminated for 1/3 of the refresh cycle (or 3 ms). Since the [STM32F411RE Nucleo board](https://os.mbed.com/platforms/ST-Nucleo-F411RE/) system clock frequency is 100 MHz, using the prescaler and the period of TIM2 we can control the frequency of the timer inttrupt and count the number of calls of the 7- segments functions. 
 - [Rotary Encoder](https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/) implementation- the hardware of the [STM32F411RE Nucleo board](https://os.mbed.com/platforms/ST-Nucleo-F411RE/) timer in encoder mode provides a complete hardware solution for detecting signals and deciding the direction of counting up or down which significantly ease the process of firmware development for interfacing this kind of sensors. The following [tutorial](https://deepbluembedded.com/stm32-timer-encoder-mode-stm32-rotary-encoder-interfacing/) discuss the STM32 Timer encoder mode.
-##Step Sequencer
+## Step Sequencer
 
 
