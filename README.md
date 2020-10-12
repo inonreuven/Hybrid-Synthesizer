@@ -37,6 +37,7 @@ The rotary Encoders used as BPM selection: one to set the BPM value and one for 
 - [Rotary Encoder](https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/) implementation- the hardware of the [STM32F411RE Nucleo board](https://os.mbed.com/platforms/ST-Nucleo-F411RE/) timer in encoder mode provides a complete hardware solution for detecting signals and deciding the direction of counting up or down which significantly ease the process of firmware development for interfacing this kind of sensors. The following [tutorial](https://deepbluembedded.com/stm32-timer-encoder-mode-stm32-rotary-encoder-interfacing/) discuss the STM32 Timer encoder mode. src
 ## Step Sequencer
 the step sequencer is a state machine with 1-16 states, where each state is an DC analog voltage level of 0-5 Volt. The voltage level determines the frequency of the VCOs and the rate (tempo) of switching states determined by the clock. The output signal can be seen in the following image:
-<img src="Images/StepSequencerStateMachinejpg.jpg" width="100">.
+
+<img src="Images/StepSequencerStateMachinejpg.jpg" width="1000">.
 
 
