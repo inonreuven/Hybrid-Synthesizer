@@ -19,6 +19,6 @@ The synth consists two main parts; digital and analog, when this project focuses
 * MIDI2CV - convert MIDI messages to control voltage signals.
 
 ## Block Diagram
-![](Images/BlockDiagram.png)
+![](Images/BlockDiagram.jpg)
 
 
