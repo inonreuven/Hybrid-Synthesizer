@@ -25,7 +25,7 @@ The synth consists two main parts; digital and analog, when this project focuses
 In musical terminology tempo is the speed or pace of a given piece and it is measured in beats per minute (BPM). Since we want to enable the user to control the tempo, the clock generator consists of hardware components which allows the user to set the frequency continuously in one hand and discrete on the other hand. It is important to display the BPM of the clock while playing in order to provide the user the current tempo. The clock display includes not only hardware circuit but also C code which coordinates the program to the clock circuit. 
 ### Clock Generator diagram
 <img src="Images/ClockGeneratorDiagram.jpg" width="800">
-### Clock Hardware
+## Clock Hardware
 
 * [Rotary Encoder](https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/).
 * [7- segments display](https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html).
