@@ -18,4 +18,7 @@ The synth consists two main parts; digital and analog, when this project focuses
 *	Step Sequencer - generates up to 16 different DC analog signals (triggered by the clock) which control the frequency of the oscillators to play notes.
 * MIDI2CV - convert MIDI messages to control voltage signals.
 
+## Block Diagram
+![](Images/BlockDiagram.png)
+
 
