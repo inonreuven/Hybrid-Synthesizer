@@ -26,9 +26,10 @@ In musical terminology tempo is the speed or pace of a given piece and it is mea
 ### Clock Generator diagram
 <img src="Images/ClockGeneratorDiagram.jpg" width="800">.
 ### Clock Hardware
-* [Rotary Encoder](https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/).
+* Two [Rotary Encoder](https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/).
 * [7- segments display](https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html).
 * Two NPN transistors in a row.
-
+### Clock implementation
+The rotary Encoders used as BPM selection: one for BPM value and one for mult/ div the frequency. Since the clock generates pulses in 60 bpm (1 Hz) up to 200 bpm (3.3 Hz)  it is enough to use 7- segments with three digits only. The use of the NPN transistors is for amplify to amplitude of the clock from 3.3 volt output to 5 volt with the same phase.   
 
 
