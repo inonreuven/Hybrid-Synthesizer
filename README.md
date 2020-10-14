@@ -23,7 +23,7 @@ The synth consists two main parts; digital and analog, when this project focuses
 
 ## Clock Generator
 In musical terminology tempo is the speed or pace of a given piece and it is measured in beats per minute (BPM). Since we want to enable the user to control the tempo, the clock generator consists of hardware components which allows the user to set the frequency continuously in one hand and discrete on the other hand. It is important to display the BPM of the clock while playing in order to provide the user the current tempo. The clock display includes not only hardware circuit but also C code which coordinates the program to the clock circuit. 
-### Clock Generator diagram
+### Clock Generator scheme
 <img src="Images/ClockGeneratorDiagram.jpg" width="800">.
 ### Clock Hardware
 * Two [Rotary Encoder](https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/).
@@ -43,10 +43,11 @@ the step sequencer is a state machine with 1-16 states, where each state is a DC
 We can see periodic signal with 8 diffrent levels and 10 DC analog signals. Each voltage level determines the basic VCOs frequency.    
 ### Step Sequencer implementation
 I connected 16 potentiometers to [decoder 16:4](https://assets.nexperia.com/documents/data-sheet/74HC_HCT4514.pdf) and the four selcteor pins to the microcontroller (update the output using timer 2 interrupt). Using the Encoder i can decide how many steps(notes) to play.  
-### Step Sequencer diagram
+### Step Sequencer scheme
 <img src="Images/StepSequencerDiagram.jpeg" width="800">.
 
 ## MIDI2CV
-[MIDI](http://web.archive.org/web/20070820161159/http://www.borg.com/~jglatt/tech/midispec.htm) is a digital protocol which allows synthesisers and computers to talk to each other, and CV means control voltage. There are various different means by which synthesisers can “talk” to each other and one of the most common is the CV. Using two control signals: one to define the pitch of the note and the other to say whether the note should be playing or not we can determine the VCOs frequency in the same way the sequqncer does. 
-
+[MIDI](http://web.archive.org/web/20070820161159/http://www.borg.com/~jglatt/tech/midispec.htm) is a digital protocol which allows synthesisers and computers to talk to each other, and CV means control voltage. There are various different means by which synthesisers can “talk” to each other and one of the most common is the CV. Using two control signals: one to define the pitch of the note and the other to say whether the note should be playing or not, we can determine the VCOs frequency in the same way the sequqncer does. 
+### MIDI2CV scheme
+<img src="Images/MIDI2CV.PNG" width="500">.
 
