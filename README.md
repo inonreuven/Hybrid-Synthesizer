@@ -44,7 +44,7 @@ In the image above we can see periodic signal with 8 diffrent levels and 10 DC a
 ### Step Sequencer implementation
 I connected 16 potentiometers to [decoder 16:4](https://assets.nexperia.com/documents/data-sheet/74HC_HCT4514.pdf) and the four selcteor pins to the microcontroller (update the output using timer 2 interrupt). Using the Encoder i can decide how many steps(notes) to play.  
 ### Step Sequencer diagram
-<img src="Images/StepSequencerDiagram.jpg" width="800">.
+<img src="Images/StepSequencerDiagram.jpeg" width="800">.
 
 
 
