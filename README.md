@@ -40,11 +40,13 @@ the step sequencer is a state machine with 1-16 states, where each state is a DC
 
 <img src="Images/StepSequencerStateMachinejpg.jpg" width="500">.
 
-In the image above we can see periodic signal with 8 diffrent levels and 10 DC analog signals. Each voltage level determines the basic VCOs frequency.    
+We can see periodic signal with 8 diffrent levels and 10 DC analog signals. Each voltage level determines the basic VCOs frequency.    
 ### Step Sequencer implementation
 I connected 16 potentiometers to [decoder 16:4](https://assets.nexperia.com/documents/data-sheet/74HC_HCT4514.pdf) and the four selcteor pins to the microcontroller (update the output using timer 2 interrupt). Using the Encoder i can decide how many steps(notes) to play.  
 ### Step Sequencer diagram
 <img src="Images/StepSequencerDiagram.jpeg" width="800">.
 
+## MIDI2CV
+[MIDI](http://web.archive.org/web/20070820161159/http://www.borg.com/~jglatt/tech/midispec.htm) is a digital protocol which allows synthesisers and computers to talk to each other, and CV means control voltage. There are various different means by which synthesisers can “talk” to each other and one of the most common is the CV. Using two control signals: one to define the pitch of the note and the other to say whether the note should be playing or not we can determine the VCOs frequency in the same way the sequqncer does. 
 
 
