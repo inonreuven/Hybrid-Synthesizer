@@ -53,9 +53,9 @@ I connected 16 potentiometers to [decoder 16:4](https://assets.nexperia.com/docu
 
 ### MIDI2CV motivation
 MIDI-to-CV includes three main issues:
-* [MIDI to UART](#miditouart)- converts thr MIDI message to UART.
-* [UART to PWM](#uarttopwm)- converts the data to PWM signal.
-* [PWM to CV](#pwmtocv)- LPF to convert the PWM to CV.
+* [MIDI to UART](#midi-to-uart)- converts thr MIDI message to UART.
+* [UART to PWM](#uart-to-pwm)- converts the data to PWM signal.
+* [PWM to CV](#pwm-to-cv)- LPF to convert the PWM to CV.
 
 #### MIDI to UART
 
