@@ -57,18 +57,18 @@ MIDI-to-CV includes three main issues:
 * [UART to PWM](#uarttopwm)- converts the data to PWM signal.
 * [PWM to CV](#pwmtocv)- LPF to convert the PWM to CV.
 
-__MIDI to UART__
+#### MIDI to UART
 
 The MIDI protocol shares many similarities with standard asynchronous serial interfaces, so i could use the UART pins of my STM32 to send and receive MIDI's event messages. In the [MIDI Tutorial](https://learn.sparkfun.com/tutorials/midi-tutorial/hardware--electronic-implementation) you can find all the information you need to know about MIDI protocol and MIDI-IN circuit. MIDI uses a clock rate of 31,250 bits per second. To send an 8-bit byte, it needs to be bookended with start and stop bits, making ten bits total. That means a byte takes about 320 microseconds to send, and the maximum throughout on a MIDI connection is 3,125 bytes per second. The average MIDI message is three bytes long, taking roughly one millisecond to transmit. The sparkFun MIDI Shield sends the signal to UART RX pin of my STM32, thus the microcontroller gets every 320 microseconds another byte.
 
-__UART to PWM__
+#### UART to PWM
 Briefly, MIDI uses bytes to convey a wide array of musical information. My synth is monophonic(playing only one note at once), thus, I was only interested in a few messages:
 
--note On/Off (pressing a key message) = 0x90/0x80
--pitch (what key I am pressing message) = 0x00- 0x7F
--velocity (how hard I am pressing the key message) = 0x00- 0x7F
+* note On/Off (pressing a key message) = 0x90/0x80.
+* pitch (what key I am pressing message) = 0x00- 0x7F.
+* velocity (how hard I am pressing the key message) = 0x00- 0x7F.
 CV conveys the same information as MIDI but does it differently, using both analog and logic-level signals. MIDI note on/off or pitch note messages map to logic-level GATE and TRIGGER CV signals. Each pitch gets a specific duty cycle so it will sounds most similar to the original note.
 
-__PWM to CV__
+#### PWM to CV
  For converting the STM's digital output to analog CV signals I am using filtered PWM. 
 
