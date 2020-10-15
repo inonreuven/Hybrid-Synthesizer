@@ -76,19 +76,7 @@ The digital-to-analog conversion is according to the following relationship(all 
 
 A_analog=A_pwm*D.C
 
-The generic transfer function for a Sallen-Key filter is:
+Take into account that the PWM frequency is 10 KHz with 3.3 amplitude, the Sallen- Key circuit becomes:
 
-V_out/V_in =(w_0^2)/(s^2+2αs+w_0^2 )
-
-Solving the equation above for 
-
-α/w_0 =0.7w_0^2=1/(R_2 C_1 C_2 R_1 )   α=(R_1+R_2)/(2R_1 R_2 C_1 )  
-
-We get
-C_1=2C_2
-s^2+2αs+w_0^2=0 
-Since we want complex pole 
-(R_1+R_2 )^2/(4R_1 R_2 )<C_1/C_2 
-Take into account that the PWM frequency is 10 KHz, 3.3 amplitude and 50% D.C, the Sallen- Key circuit becomes:
 
 
