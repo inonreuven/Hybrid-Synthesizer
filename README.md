@@ -53,10 +53,11 @@ I connected 16 potentiometers to [decoder 16:4](https://assets.nexperia.com/docu
 
 ### MIDI2CV motivation
 MIDI-to-CV includes three main issues:
-* [MIDI to UART](#miditouart)-  
-* [UART to PWM](#uarttopwm)- 
-* [PWM to CV](#pwmtocv)- 
+* [MIDI to UART](#miditouart)- converts thr MIDI message to UART.
+* [UART to PWM](#uarttopwm)- converts the data to PWM signal.
+* [PWM to CV](#pwmtocv)- LPF to convert the PWM to CV.
 
-__MIDI to UART__
+__MIDI to UART:__
+
 The MIDI protocol shares many similarities with standard asynchronous serial interfaces, so i could use the UART pins of my STM32 to send and receive MIDI's event messages. In the [MIDI Tutorial](https://learn.sparkfun.com/tutorials/midi-tutorial/hardware--electronic-implementation) you can find all the information you need to know about MIDI protocol and MIDI-IN circuit. Briefly, MIDI uses bytes to convey a wide array of musical information. 
 
