@@ -67,8 +67,28 @@ Briefly, MIDI uses bytes to convey a wide array of musical information. My synth
 * note On/Off (pressing a key message) = 0x90/0x80.
 * pitch (what key I am pressing message) = 0x00- 0x7F.
 * velocity (how hard I am pressing the key message) = 0x00- 0x7F.
+
 CV conveys the same information as MIDI but does it differently, using both analog and logic-level signals. MIDI note on/off or pitch note messages map to logic-level GATE and TRIGGER CV signals. Each pitch gets a specific duty cycle so it will sounds most similar to the original note.
 
 #### PWM to CV
- For converting the STM's digital output to analog CV signals I am using filtered PWM. 
+For converting the STM's digital output to analog CV signals I am using filtered PWM with Sallen- Key filter. A Sallen- Key filter is an active 2-pole filter that can be designed to work as a cascade of two 1-pole RC filters. 
+The digital-to-analog conversion is according to the following relationship(all the non-DC components of the signal would be eliminated, and only the DC component will remain):
+
+A_analog=A_pwm*D.C
+
+The generic transfer function for a Sallen-Key filter is:
+
+V_out/V_in =(w_0^2)/(s^2+2αs+w_0^2 )
+
+Solving the equation above for 
+
+α/w_0 =0.7w_0^2=1/(R_2 C_1 C_2 R_1 )   α=(R_1+R_2)/(2R_1 R_2 C_1 )  
+
+We get
+C_1=2C_2
+s^2+2αs+w_0^2=0 
+Since we want complex pole 
+(R_1+R_2 )^2/(4R_1 R_2 )<C_1/C_2 
+Take into account that the PWM frequency is 10 KHz, 3.3 amplitude and 50% D.C, the Sallen- Key circuit becomes:
+
 
