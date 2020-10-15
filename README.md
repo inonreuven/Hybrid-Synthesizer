@@ -78,6 +78,6 @@ A_analog=A_pwm*D.C
 
 Take into account that the PWM frequency is 10 KHz with 3.3 amplitude, the Sallen- Key circuit becomes:
 
-<img src="Images/SallenKeyFilter.jpg" width="1000">.
+<img src="Images/SallenKeyFilter.jpg" width="500">.
 
 
