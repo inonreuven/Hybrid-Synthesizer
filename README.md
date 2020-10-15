@@ -77,6 +77,6 @@ The digital-to-analog conversion is according to the following relationship(all 
 A_analog=A_pwm*D.C
 
 Take into account that the PWM frequency is 10 KHz with 3.3 amplitude, the Sallen- Key circuit becomes:
-
+<img src="Images/SallenKeyFilter.jpg" width="100">.
 
 
